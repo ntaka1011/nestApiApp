@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  dev-database:
+    image: postgres:15.0
+    container_name: dev-database
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWD: Abc123456789
+      POSTGRES_DB: testdb
+      POSTGRES_HOST_AUTH_METHOD: trust
+    networks:
+      - nestjs-network
+networks:
+  nestjs-network:
+#tại sao phải dùng netwỏk vì chúng ta có nhiều service muốn kết nối với nhau khi ấy nó nhén chung network để nó có cùng địa chỉ IP networks:
+#docker compose up -d
+#docker compose down
+#docker compose up -d dev-database -d
+
+#testDB
+#docker exec -it dev-database bash
+
+#xem database dưới dạng web
+#npx prisma studio
+
