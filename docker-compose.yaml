@@ -25,3 +25,10 @@ networks:
 #xem database dưới dạng web
 #npx prisma studio
 
+#docker xem
+#docker exec -it ten database bash
+#connet database docker
+#psql -U postgres -W testdb
+#xem db
+#\dt
+

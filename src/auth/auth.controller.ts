@@ -24,7 +24,7 @@ export class AuthController {
     );
     // return 'register a new user';
     // return JSON
-    return this.authService.register();
+    return this.authService.register(body);
   }
 
   // POST .../auth/login
